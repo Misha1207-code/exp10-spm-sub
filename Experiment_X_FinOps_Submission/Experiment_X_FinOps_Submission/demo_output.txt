@@ -1,0 +1,36 @@
+=== FinOps Cost Observability Demo (synthetic data) ===
+Resources analyzed: 8
+Total cost: $445.25
+Total budget: $455.00
+Budget variance: $-9.75 (-2.1%)
+
+Cost by service:
+  Compute      $  199.90
+  Database     $  182.20
+  Storage      $   34.55
+  Network      $   28.60
+
+Budget alerts:
+  ALERT vm-dev-02: $39.00 > budget $30.00
+  ALERT db-test-01: $64.20 > budget $50.00
+  ALERT egress-01: $28.60 > budget $20.00
+  ALERT snapshot-old-01: $12.80 > budget $10.00
+
+Idle-resource candidates (review before action):
+  REVIEW vm-dev-02: utilization 18%, cost $39.00
+  REVIEW db-test-01: utilization 12%, cost $64.20
+  REVIEW snapshot-old-01: utilization 0%, cost $12.80
+
+Wrote: demo/finops_summary.csv
+Wrote: demo/finops_dashboard.html
+PASS: cost aggregation, budget checks, and dashboard generation completed.
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.

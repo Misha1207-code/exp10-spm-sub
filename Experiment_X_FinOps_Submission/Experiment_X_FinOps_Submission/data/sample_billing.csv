@@ -1,0 +1,9 @@
+date,service,resource,cost_usd,budget_usd,utilization_pct,idle
+2026-10-01,Compute,vm-prod-01,84.5,100,72,no
+2026-10-01,Compute,vm-dev-02,39.0,30,18,yes
+2026-10-01,Storage,object-store-01,21.75,25,55,no
+2026-10-01,Database,db-test-01,64.2,50,12,yes
+2026-10-01,Network,egress-01,28.6,20,0,no
+2026-10-01,Compute,vm-prod-02,76.4,100,68,no
+2026-10-01,Storage,snapshot-old-01,12.8,10,0,yes
+2026-10-01,Database,db-prod-01,118.0,120,81,no
